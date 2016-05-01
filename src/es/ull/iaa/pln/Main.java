@@ -3,15 +3,13 @@
  */
 package es.ull.iaa.pln;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
+
 
 /**
  * @author eleazardd
@@ -24,7 +22,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		ParseCommands commands = new ParseCommands(args, USAGE);
-		
+
 		Path pathI = Paths.get(commands.getString());
 	    try {
 	    	Stream<String> lines = Files.lines(pathI);
